@@ -1,6 +1,6 @@
 # lavalink-repl
 Lavalink on replit
-
+<a href="https://repl.it/github/kagchi/lavalink-repl"><img src="https://img.shields.io/badge/REPL-FORK-green">
 ## Connecting
 - [x] Lavalink's port will always 80
 - [x] Default password `youshallnotpass`
