@@ -25,5 +25,5 @@ const manager = new Manager(nodes, {
     }
 });
 
-#...
+//...
 ```
