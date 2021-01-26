@@ -32,3 +32,5 @@ const manager = new Manager(nodes, {
 
 //...
 ```
+
+Example bot [here](https://github.com/Allvaa/lavalink-musicbot)
