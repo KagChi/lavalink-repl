@@ -21,7 +21,7 @@ Lavalink on replit
 ```js
 const { Manager } = require("lavacord");
 const nodes = [
-    { id: "1", host: "https://lavalink-repl.ahmasa.repl.co", port: 80, password: "youshallnotpass" }
+    { id: "1", host: "lavalink-repl.ahmasa.repl.co", port: 443, password: "youshallnotpass" }
 ];
 const manager = new Manager(nodes, {
     user: client.user.id, // Client id
