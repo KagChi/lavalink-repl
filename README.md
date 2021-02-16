@@ -7,7 +7,7 @@ Lavalink on replit
 - [x] Default password `youshallnotpass`
 
 ## Important notes:
-- [x] To keep this 24/7 you need to make an account on UptimeRobot service, and make HTTP request to your app every 5 minutes. For example, if your app is named `lavalink-repl` and your repl username is `ahmasa` then make HTTP request to `https://lavalink-repl.ahmasa.repl.co`
+- [x] To keep this 24/7 you need to make an account on UptimeRobot service, and make HTTP request to your app every 5 minutes. For example, if your app is named `andesite-repl` and your repl username is `ahmasa` then make HTTP request to `https://andesite-repl.ahmasa.repl.co`
 - [x] Do not forget to set your password (in `application.conf` file)
 
 ## Advantages:
