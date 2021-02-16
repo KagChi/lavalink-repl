@@ -1,5 +1,5 @@
-# lavalink-repl
-Lavalink on replit
+# andesite-repl
+Andesite on replit
 <br>
 <a href="https://repl.it/github/kagchi/lavalink-repl"><img src="https://img.shields.io/badge/REPL-FORK-green"></a>
 ## Connecting
