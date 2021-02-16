@@ -3,7 +3,7 @@ Andesite on replit
 <br>
 <a href="https://repl.it/github/kagchi/lavalink-repl"><img src="https://img.shields.io/badge/REPL-FORK-green"></a>
 ## Connecting
-- [x] Andesite port will always 80 
+- [x] Andesite port will always 443 
 - [x] Default password `null`
 
 ## Important notes:
@@ -18,7 +18,7 @@ Andesite on replit
 ```js
 const { Manager } = require("lavacord");
 const nodes = [
-    { id: "1", host: "andesite-repl.ahmasa.repl.co", port: 80 }
+    { id: "1", host: "andesite-repl.ahmasa.repl.co", port: 443 }
 ];
 const manager = new Manager(nodes, {
     user: client.user.id, // Client id
