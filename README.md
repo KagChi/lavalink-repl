@@ -4,7 +4,7 @@ Andesite on replit
 <a href="https://repl.it/github/kagchi/lavalink-repl"><img src="https://img.shields.io/badge/REPL-FORK-green"></a>
 ## Connecting
 - [x] Andesite port will always 80 
-- [x] Default password `youshallnotpass`
+- [x] Default password `null`
 
 ## Important notes:
 - [x] To keep this 24/7 you need to make an account on UptimeRobot service, and make HTTP request to your app every 5 minutes. For example, if your app is named `andesite-repl` and your repl username is `ahmasa` then make HTTP request to `https://andesite-repl.ahmasa.repl.co`
@@ -18,7 +18,7 @@ Andesite on replit
 ```js
 const { Manager } = require("lavacord");
 const nodes = [
-    { id: "1", host: "andesite-repl.ahmasa.repl.co", port: 80, password: "youshallnotpass" }
+    { id: "1", host: "andesite-repl.ahmasa.repl.co", port: 80 }
 ];
 const manager = new Manager(nodes, {
     user: client.user.id, // Client id
