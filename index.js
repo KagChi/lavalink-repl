@@ -3,12 +3,12 @@ const { default: { stream } } = require("got");
 const { createWriteStream } = require("fs");
 const { execSync } = require("child_process");
 
-const url = "https://ci.fredboat.com/repository/download/Lavalink_Build/.lastSuccessful/Lavalink.jar?guest=1&branch=refs/heads/dev";
+const url = "https://github.com/natanbc/andesite/releases/download/0.20.1-2/andesite-0.20.1-all.jar";
 
 const start = () => {
-    const download = stream(url).pipe(createWriteStream('Lavalink.jar'));
+    const download = stream(url).pipe(createWriteStream('Andesite.jar'));
     download.on("finish", () => {
-        execSync("java -jar Lavalink.jar", { stdio: "inherit" });
+        execSync("java -jar Andesite.jar", { stdio: "inherit" });
     });
 };
 
