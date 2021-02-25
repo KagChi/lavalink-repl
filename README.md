@@ -34,8 +34,7 @@ const manager = new Manager(nodes, {
 //...
 ```
 
-- [x] Custom Shoukaku [Repo Custom Shoukaku](https://github.com/NezuChan/shoukaku)
-- [x] Installation npm i nezuchan/shoukaku
+- [x] Latest Shoukaku (V1.6.1)
 ```js
 const { Client } = require('discord.js');
 const { Shoukaku } = require('shoukaku');
