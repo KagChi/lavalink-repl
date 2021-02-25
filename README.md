@@ -3,7 +3,7 @@ Lavalink on replit
 <br>
 <a href="https://repl.it/github/kagchi/lavalink-repl"><img src="https://img.shields.io/badge/REPL-FORK-green"></a>
 ## Connecting
-- [x] Lavalink's port will always 443 (Due to dev build)
+- [x] Lavalink's port will always 443
 - [x] Default password `youshallnotpass`
 - [x] using custom lavalink client
 
