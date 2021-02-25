@@ -40,7 +40,7 @@ const manager = new Manager(nodes, {
 const { Client } = require('discord.js');
 const { Shoukaku } = require('shoukaku');
  
-const LavalinkServer = [{ name: 'my-lavalink-server', host: 'lavalink-repl.ahmasa.repl.co', port: 443, auth: 'youshallnotpass' }];
+const LavalinkServer = [{ name: 'my-lavalink-server', host: 'lavalink-repl.ahmasa.repl.co', port: 443, auth: 'youshallnotpass', secure: true }];
 const ShoukakuOptions = { moveOnDisconnect: false, resumable: false, resumableTimeout: 30, reconnectTries: 2, restTimeout: 10000 };
  
 class ExampleBot extends Client {
