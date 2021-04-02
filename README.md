@@ -92,4 +92,4 @@ new ExampleBot()
     .login('token')
     .catch(console.error);
 ```
-Example bot [here](https://github.com/Allvaa/lavalink-musicbot)
+Example bot [here](https://github.com/KagChi/noteblock)
