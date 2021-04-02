@@ -15,6 +15,8 @@ Lavalink on replit
 - [x] Use java 13 :3
 - [x] Easy setup
 - [x] Using Dev build
+## Glitch
+- for glitch user here [Repo](https://github.com/KagChi/lavalink-glitch)
 
 ## Example:
 - [x] Lavacord
