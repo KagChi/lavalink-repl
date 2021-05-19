@@ -18,7 +18,7 @@ Lavalink on replit
 ## Glitch
 - for glitch user here [Repo](https://github.com/KagChi/lavalink-glitch)
 
-
+## Example
 - [x] Latest Shoukaku (v1.6.x)
 ```js
 const { Client } = require('discord.js');
