@@ -18,25 +18,8 @@ Lavalink on replit
 ## Glitch
 - for glitch user here [Repo](https://github.com/KagChi/lavalink-glitch)
 
-## Example:
-- [x] Lavacord
-```js
-const { Manager } = require("lavacord");
-const nodes = [
-    { id: "1", host: "lavalink-repl.ahmasa.repl.co", port: 443, password: "youshallnotpass" }
-];
-const manager = new Manager(nodes, {
-    user: client.user.id, // Client id
-    shards: shardCount, // Total number of shards your bot is operating on
-    send: (packet) => {
-        // this needs to send the provided packet to discord using the method from your library. use the @lavacord package for the discord library you use if you don't understand this
-    }
-});
 
-//...
-```
-
-- [x] Latest Shoukaku (V1.6.1)
+- [x] Latest Shoukaku (v1.6.x)
 ```js
 const { Client } = require('discord.js');
 const { Shoukaku } = require('shoukaku');
