@@ -32,7 +32,7 @@ const ShoukakuOptions = { moveOnDisconnect: false, resumable: false, resumableTi
 class ExampleBot extends Client {
     constructor(opts) {
         super(opts);
-        this.shoukaku = new Shoukaku(new Libraries.DiscordJS(client), LavalinkServer, ShoukakuOptions);
+        this.shoukaku = new Shoukaku(new Libraries.DiscordJS(this), LavalinkServer, ShoukakuOptions);
     }
 
     login(token) {
@@ -46,6 +46,7 @@ class ExampleBot extends Client {
         this.shoukaku.on('error', (name, error) => console.error(`Lavalink ${name}: Error Caught,`, error));
         this.shoukaku.on('close', (name, code, reason) => console.warn(`Lavalink ${name}: Closed, Code ${code}, Reason ${reason || 'No reason'}`));
         this.shoukaku.on('disconnected', (name, reason) => console.warn(`Lavalink ${name}: Disconnected, Reason ${reason || 'No reason'}`));
+        this.shoukaku.on("debug", (name, reason) => console.debug(`Lavalink node ${name}`, reason || "No reason"));
     }
 
     _setupClientEvents() {
@@ -54,16 +55,18 @@ class ExampleBot extends Client {
             if (!msg.content.startsWith('$play')) return;
             if (this.shoukaku.players.get(msg.guild.id)) return;
             const args = msg.content.split(' ');
-            if (!args[1]) return;
+            if (!args[0]) return;
             const node = this.shoukaku.getNode();
-            let data = await node.rest.resolve(args[1]);
+            let query = args.join(' ');
+            let data = await node.rest.resolve(query);
             if (!data) return;
             const player = await node.joinChannel({
                 guildId: msg.guild.id,
-                shardId: msg.guild.shardId,
-                channelId: msg.member.voice.channelId
+                shardId: msg.guild.shardId || 0,
+                channelId: msg.member.voice.channelId,
+                deaf: true
             });
-            const events = ['end', 'error', 'closed', 'disconnect'];
+            const events = ['end', 'error', 'closed', 'disconnect', 'nodeDisconnect'];
             for (const event of events) {
                 player.on(event, info => {
                     console.log(info);
@@ -72,7 +75,7 @@ class ExampleBot extends Client {
             }
             data = data.tracks.shift();
             player.playTrack(data); 
-            await msg.channel.send("Now Playing: " + data.info.title);
+            await msg.channel.send({ content: `Now Playing ${data.info.title}`});
         });
         this.on('ready', () => console.log('Bot is now ready'));
     }
