@@ -26,7 +26,7 @@ lavalink:
       #strategy: "RotateOnBan" # RotateOnBan | LoadBalance | NanoSwitch | RotatingNanoSwitch
       #searchTriggersFail: true # Whether a search 429 should trigger marking the ip as failing
       #retryLimit: -1 # -1 = use default lavaplayer value | 0 = infinity | >0 = retry will happen this numbers times
-   plugins:
+    plugins:
       - dependency: "com.dunctebot:skybot-lavalink-plugin:1.3.3"
         repository: "https://m2.duncte123.dev/releases"
       - dependency: "me.rohank05:lavalink-filter-plugin:0.0.1" # replace x.x.x with the latest release tag!
